@@ -74,7 +74,7 @@ describe('Unit Tests', function () {
       files: [path.join(__dirname, '/fixture/coffeescript.coffee')],
       quiet: true,
       reporter: 'json',
-      compilers: ['coffee:coffee-script/register']
+      compilers: ['coffeescript/register']
     }, function (error) {
       should.not.exist(error);
       done();
