@@ -63,7 +63,7 @@ describe('Unit Tests', function () {
     }, function (error, output) {
       should.exist(error);
       output = JSON.parse(output);
-      output.stats.tests.should.equal(1);
+      output.stats.failures.should.equal(1);
       done();
     });
   });
@@ -74,7 +74,7 @@ describe('Unit Tests', function () {
       files: [path.join(__dirname, '/fixture/coffeescript.coffee')],
       quiet: true,
       reporter: 'json',
-      compilers: ['coffeescript/register']
+      compilers: ['coffee:coffeescript/register']
     }, function (error) {
       should.not.exist(error);
       done();
